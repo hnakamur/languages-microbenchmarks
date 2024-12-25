@@ -10,9 +10,9 @@ function compile {
   fi
 }
 
-compile 'c' 'clang -O3 c/code.c -o c/code'
+compile 'c' 'clang -g -O3 c/code.c -o c/code'
 # compile 'cpp' 'clang++ -std=c++23 -march=native -O3 -Ofast -o cpp/code cpp/code.cpp'
-compile 'go' 'go build -ldflags "-s -w" -o go/code go/code.go'
+compile 'go' 'go build -o go/code go/code.go'
 # compile 'jvm' 'javac jvm/code.java'
 # compile 'js' 'bun build --bytecode --compile js/code.js --outfile js/bun'
 # compile 'jvm' 'native-image -O3 jvm.code'
